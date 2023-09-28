@@ -206,33 +206,38 @@ int main()
     int inicio, fin;
     indices(inicio, fin, world_size, world_rank, ncols, nrows, len_segmento_matriz);
 
-    // Array 1D que contiene valores de fila/s matriz.
-    double* array_valores = leer_segmento("matrix_1000.txt", inicio, fin);
-
-    // Funcion que calcula valor de b_(k+1), luego iteramos por una cantidad 'n'.
-    double* init_buff = new double[nrows];
-    double* b_k_mas_1_num = b_k_1(array_valores, final_array, len_segmento_matriz, b_len, world_rank);
-    MPI_Allgatherv(b_k_mas_1_num, len_segmento_matriz, MPI_DOUBLE, init_buff, recvcounts, displs, MPI_DOUBLE, MPI_COMM_WORLD);
-    double* b_k_mas_1 =  b_k_1_dist(init_buff, nrows);
-
-    // Iteramos y actualizamos el vector para un numero 'n' fijo de iteraciones.
-    int n = 200;
-    double* b_k_mas_1_temp = new double[b_len];
-    for(int i = 0; i < n; i++){
-        b_k_mas_1 =  b_k_1(array_valores, b_k_mas_1, len_segmento_matriz, b_len, world_rank);
-        MPI_Allgatherv(b_k_mas_1, len_segmento_matriz, MPI_DOUBLE, b_k_mas_1_temp, recvcounts, displs, MPI_DOUBLE, MPI_COMM_WORLD);
-        b_k_mas_1 =  b_k_1_dist(b_k_mas_1_temp, nrows);
+    for(int i = 0; i < b_len; i++){
+        printf("P%d, indice: %d, valor: %f\n", world_rank, i, final_array[i]);
     }
 
-    // Finalmente con el vector propio ya "convergido", Solamente proceso 0 lee toda la matriz y 
-    // la multiplica por valor final de vector b_(k+1) y su transpuesto.
-    if(world_rank == 0){
-        double* matriz = leer_segmento("matrix_1000.txt", 0, (nrows*ncols));
-        double* v_transpuesto = transpuesto(b_k_mas_1_temp, b_len);
-        double v_propio = u_k(b_k_mas_1_temp, matriz, v_transpuesto, b_len, nrows, ncols);
-        double valor_final = 10 - v_propio;
-        printf("VALOR FINAL: %f\n", valor_final);
-    }
+    // // AQUI
+    // // Array 1D que contiene valores de fila/s matriz.
+    // double* array_valores = leer_segmento("matrix_1000.txt", inicio, fin);
+
+    // // Funcion que calcula valor de b_(k+1), luego iteramos por una cantidad 'n'.
+    // double* init_buff = new double[nrows];
+    // double* b_k_mas_1_num = b_k_1(array_valores, final_array, len_segmento_matriz, b_len, world_rank);
+    // MPI_Allgatherv(b_k_mas_1_num, len_segmento_matriz, MPI_DOUBLE, init_buff, recvcounts, displs, MPI_DOUBLE, MPI_COMM_WORLD);
+    // double* b_k_mas_1 =  b_k_1_dist(init_buff, nrows);
+
+    // // Iteramos y actualizamos el vector para un numero 'n' fijo de iteraciones.
+    // int n = 200;
+    // double* b_k_mas_1_temp = new double[b_len];
+    // for(int i = 0; i < n; i++){
+    //     b_k_mas_1 =  b_k_1(array_valores, b_k_mas_1, len_segmento_matriz, b_len, world_rank);
+    //     MPI_Allgatherv(b_k_mas_1, len_segmento_matriz, MPI_DOUBLE, b_k_mas_1_temp, recvcounts, displs, MPI_DOUBLE, MPI_COMM_WORLD);
+    //     b_k_mas_1 =  b_k_1_dist(b_k_mas_1_temp, nrows);
+    // }
+
+    // // Finalmente con el vector propio ya "convergido", Solamente proceso 0 lee toda la matriz y 
+    // // la multiplica por valor final de vector b_(k+1) y su transpuesto.
+    // if(world_rank == 0){
+    //     double* matriz = leer_segmento("matrix_1000.txt", 0, (nrows*ncols));
+    //     double* v_transpuesto = transpuesto(b_k_mas_1_temp, b_len);
+    //     double v_propio = u_k(b_k_mas_1_temp, matriz, v_transpuesto, b_len, nrows, ncols);
+    //     double valor_final = 10 - v_propio;
+    //     printf("VALOR FINAL: %f\n", valor_final);
+    // }
 
     MPI_Finalize();
 

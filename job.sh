@@ -2,8 +2,8 @@
 
 #SBATCH --partition=full
 
-#SBATCH --job-name=T2_IMT2112
-#SBATCH --output=log.out
+#SBATCH --job-name=debug
+#SBATCH --output=debug.out
 
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=1
