@@ -41,7 +41,8 @@ void len_segmento(int &len_segmento_vector, int &len_segmento_matriz, int nrows,
 double* leer_segmento(const string &fname, int inicio, int fin) {
     // ifstream file(fname);
     ifstream file(fname.c_str()); 
-    double* array = nullptr;
+    // double* array = nullptr;
+    double* array = NULL;
 
     if (file.is_open()) {
         int nrows, ncols;
@@ -54,9 +55,11 @@ double* leer_segmento(const string &fname, int inicio, int fin) {
         }
         
         int intervalo = (fin - inicio);
-        array = (double*)malloc(intervalo * sizeof(double));
+        // array = (double*)malloc(intervalo * sizeof(double));
+        array = new double[intervalo];
 
-        if (array != nullptr) {
+        // if (array != nullptr) {
+        if (array != NULL) {
             for (int i = 0; i < intervalo; i++) {
                 file >> array[i];
             }
@@ -123,7 +126,8 @@ double u_k(double* b_k_mas_1_temp, double* matriz, double* v_transpuesto, int b_
 
     // numerador
     // double* multi_t_matriz = new double[nrows];
-    double* multi_t_matriz = (double*)malloc(nrows * sizeof(double));
+    // double* multi_t_matriz = (double*)malloc(nrows * sizeof(double));
+    double* multi_t_matriz = new double[nrows];
     int indice = 0;
     for(int i = 0; i < nrows; i++){
         double temp = 0.0;
@@ -145,8 +149,8 @@ double u_k(double* b_k_mas_1_temp, double* matriz, double* v_transpuesto, int b_
 
 // Funcion que consigue transpuesto de vector.
 double* transpuesto(double* array_valores, int b_len){
-    // double* v_transpuesto = new double[b_len];
-    double* v_transpuesto = (double*)malloc(b_len * sizeof(double));
+    double* v_transpuesto = new double[b_len];
+    // double* v_transpuesto = (double*)malloc(b_len * sizeof(double));
     int c = 0;
     for(int i = b_len-1; i >= 0; i--){
         v_transpuesto[c] = array_valores[i];
