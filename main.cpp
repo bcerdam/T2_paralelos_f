@@ -9,7 +9,8 @@ using namespace std;
 
 // Funcion para leer dimensiones de matriz.
 void dims(const string &fname, int &nrows, int &ncols){
-    ifstream file(fname);
+    // ifstream file(fname);
+    ifstream file(fname.c_str());
     if (file.is_open()) {
         file >> nrows;
         file >> ncols;
