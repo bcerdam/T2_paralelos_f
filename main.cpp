@@ -38,7 +38,8 @@ void len_segmento(int &len_segmento_vector, int &len_segmento_matriz, int nrows,
 
 // Funcion para leer segmento de .txt.
 double* leer_segmento(const string &fname, int inicio, int fin) {
-    ifstream file(fname);
+    // ifstream file(fname);
+    ifstream file(fname.c_str()); 
     double* array = nullptr;
 
     if (file.is_open()) {
