@@ -1,0 +1,37 @@
+[1695923451.067805] [n4:3684 :0]            sys.c:618  UCX  ERROR shmget(size=2097152 flags=0xfb0) for mm_recv_desc failed: Operation not permitted, please check shared memory limits by 'ipcs -l'
+[1695923451.069226] [n4:3689 :0]            sys.c:618  UCX  ERROR shmget(size=2097152 flags=0xfb0) for mm_recv_desc failed: Operation not permitted, please check shared memory limits by 'ipcs -l'
+[1695923451.069716] [n4:3697 :0]            sys.c:618  UCX  ERROR shmget(size=2097152 flags=0xfb0) for mm_recv_desc failed: Operation not permitted, please check shared memory limits by 'ipcs -l'
+[1695923451.071192] [n4:3682 :0]            sys.c:618  UCX  ERROR shmget(size=2097152 flags=0xfb0) for mm_recv_desc failed: Operation not permitted, please check shared memory limits by 'ipcs -l'
+[1695923451.071684] [n4:3683 :0]            sys.c:618  UCX  ERROR shmget(size=2097152 flags=0xfb0) for mm_recv_desc failed: Operation not permitted, please check shared memory limits by 'ipcs -l'
+[1695923451.071627] [n4:3685 :0]            sys.c:618  UCX  ERROR shmget(size=2097152 flags=0xfb0) for mm_recv_desc failed: Operation not permitted, please check shared memory limits by 'ipcs -l'
+[1695923451.071601] [n4:3693 :0]            sys.c:618  UCX  ERROR shmget(size=2097152 flags=0xfb0) for mm_recv_desc failed: Operation not permitted, please check shared memory limits by 'ipcs -l'
+[1695923451.073044] [n4:3701 :0]            sys.c:618  UCX  ERROR shmget(size=2097152 flags=0xfb0) for mm_recv_desc failed: Operation not permitted, please check shared memory limits by 'ipcs -l'
+[1695923451.075919] [n4:3698 :0]            sys.c:618  UCX  ERROR shmget(size=2097152 flags=0xfb0) for mm_recv_desc failed: Operation not permitted, please check shared memory limits by 'ipcs -l'
+[1695923451.076741] [n4:3694 :0]            sys.c:618  UCX  ERROR shmget(size=2097152 flags=0xfb0) for mm_recv_desc failed: Operation not permitted, please check shared memory limits by 'ipcs -l'
+[1695923451.077038] [n4:3690 :0]            sys.c:618  UCX  ERROR shmget(size=2097152 flags=0xfb0) for mm_recv_desc failed: Operation not permitted, please check shared memory limits by 'ipcs -l'
+[1695923451.078564] [n4:3702 :0]            sys.c:618  UCX  ERROR shmget(size=2097152 flags=0xfb0) for mm_recv_desc failed: Operation not permitted, please check shared memory limits by 'ipcs -l'
+[1695923451.078647] [n4:3705 :0]            sys.c:618  UCX  ERROR shmget(size=2097152 flags=0xfb0) for mm_recv_desc failed: Operation not permitted, please check shared memory limits by 'ipcs -l'
+[1695923451.083079] [n4:3709 :0]            sys.c:618  UCX  ERROR shmget(size=2097152 flags=0xfb0) for mm_recv_desc failed: Operation not permitted, please check shared memory limits by 'ipcs -l'
+[1695923451.096404] [n4:3706 :0]            sys.c:618  UCX  ERROR shmget(size=2097152 flags=0xfb0) for mm_recv_desc failed: Operation not permitted, please check shared memory limits by 'ipcs -l'
+[1695923451.122886] [n4:3710 :0]            sys.c:618  UCX  ERROR shmget(size=2097152 flags=0xfb0) for mm_recv_desc failed: Operation not permitted, please check shared memory limits by 'ipcs -l'
+Process number: 2 Processor name: n4.ing.puc.cl
+Process number: 6 Processor name: n4.ing.puc.cl
+Process number: 8 Processor name: n4.ing.puc.cl
+Process number: 0 Processor name: n4.ing.puc.cl
+Process number: 1 Processor name: n4.ing.puc.cl
+Process number: 15 Processor name: n4.ing.puc.cl
+Process number: 9 Processor name: n4.ing.puc.cl
+Process number: 4 Processor name: n4.ing.puc.cl
+Process number: 10 Processor name: n4.ing.puc.cl
+Process number: 5 Processor name: n4.ing.puc.cl
+Process number: 11 Processor name: n4.ing.puc.cl
+Process number: 14 Processor name: n4.ing.puc.cl
+Process number: 12 Processor name: n4.ing.puc.cl
+Process number: 3 Processor name: n4.ing.puc.cl
+Process number: 13 Processor name: n4.ing.puc.cl
+Process number: 7 Processor name: n4.ing.puc.cl
+VALOR FINAL: 0.069169
+
+real	2m55.901s
+user	30m38.318s
+sys	0m39.313s

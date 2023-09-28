@@ -1,0 +1,7 @@
+[1695922509.905356] [n14:96337:0]            sys.c:618  UCX  ERROR shmget(size=2097152 flags=0xfb0) for mm_recv_desc failed: Operation not permitted, please check shared memory limits by 'ipcs -l'
+Process number: 0 Processor name: n14.ing.puc.cl
+VALOR FINAL: 0.069169
+
+real	4m19.653s
+user	4m10.208s
+sys	0m8.042s

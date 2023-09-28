@@ -1,0 +1,20 @@
+--------------------------------------------------------------------------
+[[235,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: n11
+
+Another transport will be used instead, although this may result in
+lower performance.
+
+NOTE: You can disable this warning by setting the MCA parameter
+btl_base_warn_component_unused to 0.
+--------------------------------------------------------------------------
+[1695916519.374766] [n11:63665:0]            sys.c:618  UCX  ERROR shmget(size=2097152 flags=0xfb0) for mm_recv_desc failed: Operation not permitted, please check shared memory limits by 'ipcs -l'
+Process number: 0 Processor name: n11
+VALOR FINAL: 0.069169
+
+real	2m46.124s
+user	2m43.052s
+sys	0m2.388s

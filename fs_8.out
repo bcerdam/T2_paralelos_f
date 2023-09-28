@@ -1,0 +1,21 @@
+[1695923266.232592] [n14:97214:0]            sys.c:618  UCX  ERROR shmget(size=2097152 flags=0xfb0) for mm_recv_desc failed: Operation not permitted, please check shared memory limits by 'ipcs -l'
+[1695923266.233181] [n14:97204:0]            sys.c:618  UCX  ERROR shmget(size=2097152 flags=0xfb0) for mm_recv_desc failed: Operation not permitted, please check shared memory limits by 'ipcs -l'
+[1695923266.232996] [n14:97205:0]            sys.c:618  UCX  ERROR shmget(size=2097152 flags=0xfb0) for mm_recv_desc failed: Operation not permitted, please check shared memory limits by 'ipcs -l'
+[1695923266.233309] [n14:97206:0]            sys.c:618  UCX  ERROR shmget(size=2097152 flags=0xfb0) for mm_recv_desc failed: Operation not permitted, please check shared memory limits by 'ipcs -l'
+[1695923266.232882] [n14:97207:0]            sys.c:618  UCX  ERROR shmget(size=2097152 flags=0xfb0) for mm_recv_desc failed: Operation not permitted, please check shared memory limits by 'ipcs -l'
+[1695923266.233350] [n14:97210:0]            sys.c:618  UCX  ERROR shmget(size=2097152 flags=0xfb0) for mm_recv_desc failed: Operation not permitted, please check shared memory limits by 'ipcs -l'
+[1695923266.233410] [n14:97213:0]            sys.c:618  UCX  ERROR shmget(size=2097152 flags=0xfb0) for mm_recv_desc failed: Operation not permitted, please check shared memory limits by 'ipcs -l'
+[1695923266.233457] [n14:97216:0]            sys.c:618  UCX  ERROR shmget(size=2097152 flags=0xfb0) for mm_recv_desc failed: Operation not permitted, please check shared memory limits by 'ipcs -l'
+Process number: 5 Processor name: n14.ing.puc.cl
+Process number: 7 Processor name: n14.ing.puc.cl
+Process number: 6 Processor name: n14.ing.puc.cl
+Process number: 0 Processor name: n14.ing.puc.cl
+Process number: 1 Processor name: n14.ing.puc.cl
+Process number: 2 Processor name: n14.ing.puc.cl
+Process number: 3 Processor name: n14.ing.puc.cl
+Process number: 4 Processor name: n14.ing.puc.cl
+VALOR FINAL: 0.069169
+
+real	1m44.322s
+user	8m31.379s
+sys	0m14.383s

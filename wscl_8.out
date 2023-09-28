@@ -1,0 +1,36 @@
+--------------------------------------------------------------------------
+[[64551,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: n11
+
+Another transport will be used instead, although this may result in
+lower performance.
+
+NOTE: You can disable this warning by setting the MCA parameter
+btl_base_warn_component_unused to 0.
+--------------------------------------------------------------------------
+[1695926000.809382] [n11:66664:0]            sys.c:618  UCX  ERROR shmget(size=2097152 flags=0xfb0) for mm_recv_desc failed: Operation not permitted, please check shared memory limits by 'ipcs -l'
+[1695926000.809433] [n11:66662:0]            sys.c:618  UCX  ERROR shmget(size=2097152 flags=0xfb0) for mm_recv_desc failed: Operation not permitted, please check shared memory limits by 'ipcs -l'
+[1695926000.831501] [n11:66663:0]            sys.c:618  UCX  ERROR shmget(size=2097152 flags=0xfb0) for mm_recv_desc failed: Operation not permitted, please check shared memory limits by 'ipcs -l'
+[1695926000.838535] [n11:66666:0]            sys.c:618  UCX  ERROR shmget(size=2097152 flags=0xfb0) for mm_recv_desc failed: Operation not permitted, please check shared memory limits by 'ipcs -l'
+[1695926000.841601] [n11:66669:0]            sys.c:618  UCX  ERROR shmget(size=2097152 flags=0xfb0) for mm_recv_desc failed: Operation not permitted, please check shared memory limits by 'ipcs -l'
+[1695926000.847294] [n11:66673:0]            sys.c:618  UCX  ERROR shmget(size=2097152 flags=0xfb0) for mm_recv_desc failed: Operation not permitted, please check shared memory limits by 'ipcs -l'
+[1695926000.848124] [n11:66670:0]            sys.c:618  UCX  ERROR shmget(size=2097152 flags=0xfb0) for mm_recv_desc failed: Operation not permitted, please check shared memory limits by 'ipcs -l'
+[1695926000.871498] [n11:66674:0]            sys.c:618  UCX  ERROR shmget(size=2097152 flags=0xfb0) for mm_recv_desc failed: Operation not permitted, please check shared memory limits by 'ipcs -l'
+Process number: 0 Processor name: n11
+Process number: 6 Processor name: n11
+Process number: 4 Processor name: n11
+Process number: 5 Processor name: n11
+Process number: 2 Processor name: n11
+Process number: 1 Processor name: n11
+Process number: 3 Processor name: n11
+Process number: 7 Processor name: n11
+[n11:66657] 7 more processes have sent help message help-mpi-btl-base.txt / btl:no-nics
+[n11:66657] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+VALOR FINAL: 0.058564
+
+real	2m32.391s
+user	12m12.854s
+sys	0m9.499s
